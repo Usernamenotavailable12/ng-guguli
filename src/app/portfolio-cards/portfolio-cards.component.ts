@@ -17,10 +17,22 @@ export class PortfolioCardsComponent implements OnInit {
       link: 'https://drive.google.com/file/d/1_6vOyL9AejLOUpZD79DJ0UhB6-CCAKji/view'
     },
     {
+      background: 'assets/images/background3.svg',
+      image: 'assets/images/project3.png',
+      title: 'Random Password Generator',
+      link: 'https://manypass.netlify.app'
+    },
+    {
       background: 'assets/images/background2.svg',
       image: 'assets/images/project2.png',
       title: 'AlphaBet Project',
       link: 'https://alpha-bet.netlify.app'
+    },
+    {
+      background: 'assets/images/background4.svg',
+      image: 'assets/images/project4.png',
+      title: 'Behance',
+      link: 'https://www.behance.net/gugadzneladze2000'
     },
     // Add more items as needed
   ];
