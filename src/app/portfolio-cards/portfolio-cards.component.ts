@@ -23,17 +23,17 @@ export class PortfolioCardsComponent implements OnInit {
       link: 'https://manypass.netlify.app'
     },
     {
-      background: 'assets/images/background2.svg',
-      image: 'assets/images/project2.png',
-      title: 'AlphaBet Project',
-      link: 'https://alpha-bet.netlify.app'
-    },
-    {
       background: 'assets/images/background4.svg',
       image: 'assets/images/project4.png',
       title: 'Behance',
       link: 'https://www.behance.net/gugadzneladze2000'
     },
+    {
+      background: 'assets/images/background2.svg',
+      image: 'assets/images/project2.png',
+      title: 'AlphaBet Project',
+      link: 'https://alpha-bet.netlify.app'
+    }
     // Add more items as needed
   ];
 
