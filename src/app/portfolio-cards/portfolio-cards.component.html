@@ -1,0 +1,8 @@
+<div class="portfolio-section" *ngFor="let item of portfolioItems">
+    <div class="background" [ngStyle]="{'background-image': 'url(' + item.background + ')'}"></div>
+    <div class="content">
+      <img [src]="item.image" [alt]="item.title" (click)="navigateTo(item.link)">
+      <p>{{ item.title }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+.wrapper {
+    width: 100%;
+    height: 90px;
+    color: var(--accent-color);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    justify-content: start !important;
+    p {
+        background-color: white;
+        color: var(--accent-color);
+        padding: 20px;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+footer {
+    background-image: url(/assets/images/footer-bg.svg);
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    mix-blend-mode: multiply;
+    @media (min-width: 769px) {
+        background-position: center 40%;
+        mix-blend-mode: multiply;
+    }
+}

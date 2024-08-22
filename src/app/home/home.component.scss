@@ -1,0 +1,22 @@
+.welcom-banner {
+    height: 250px;
+    background-image: url(/assets/images/background1.svg);
+    font-size: 1.7rem;
+    text-wrap: pre-wrap;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke: 2px var(--accent-color);
+    font-weight: 700;
+    font-family: lato;
+    color: transparent;
+    @media (min-width: 768px) {
+        height: 450px;
+        font-size: 3.7rem;
+    }
+}

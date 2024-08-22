@@ -1,0 +1,131 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-image: url(/assets/images/header-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 90px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+  .logo img {
+    height: 70px;
+    object-fit: contain;
+  }
+
+  nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: 20px;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          padding: 5px 10px;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: var(--accent-color);
+          }
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: none; /* Hide on larger screens */
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .logo img {
+      height: 50px;
+      object-fit: contain;
+    }
+    nav {
+      flex-direction: column;
+      align-items: flex-end;
+
+      .menu {
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        width: 140px;
+        background: linear-gradient(80deg,var(--accent-color), var(--primary-color));
+        position: absolute;
+        top: 61px;
+        z-index: 1000;
+        right: -20px;
+        animation: linear 200ms menuSlide;
+        border-bottom-left-radius: 15px;
+
+        @keyframes menuSlide {
+          0% {
+            width: 0px;
+          }
+          100% {
+            width: 85.05px;
+          }
+        }
+
+        li {
+          margin: 10px 0;
+          text-align: center;
+
+          a {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: block !important; /* Show the button on smaller screens */
+    }
+
+    .menu-open .menu {
+      display: flex; /* Show the menu when the button is clicked */
+    }
+  }
+}
+/* burger menu animation */
+header:has(.menu-open) .menu-toggle {
+  animation: ease-in 250ms burgerMenuRollIn;
+}
+header:not(:has(.menu-open)) .menu-toggle {
+  animation: ease-in 250ms burgerMenuRollOut;
+}
+@keyframes burgerMenuRollIn {
+        0% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+@keyframes burgerMenuRollOut {
+        0% {
+          transform: rotate(-180deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }

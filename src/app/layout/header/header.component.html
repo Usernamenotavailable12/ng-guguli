@@ -1,0 +1,14 @@
+<header>
+  <div class="logo">
+    <img src="./assets/images/oc-logo.svg" alt="Logo" />
+  </div>
+  <nav [ngClass]="{'menu-open': isMenuOpen}">
+    <ul class="menu">
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/services">Services</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+  </nav>
+</header>
