@@ -29,7 +29,7 @@ export class PortfolioCardsComponent implements OnInit {
       link: 'https://www.behance.net/gugadzneladze2000'
     },
     {
-      background: 'assets/images/background2.svg',
+      background: 'assets/images/background1.svg',
       image: 'assets/images/project2.png',
       title: 'AlphaBet Project',
       link: 'https://alpha-bet.netlify.app'
