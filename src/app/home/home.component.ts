@@ -4,12 +4,13 @@ import { PaginatorModule } from 'primeng/paginator';
 import { CarouselComponent } from '../objects/carousel/carousel.component';
 import { PortfolioCardsComponent } from "../portfolio-cards/portfolio-cards.component";
 import { ImageRotatorComponent } from '../image-rotator/image-rotator.component';
+import { ArtworkComponent } from "../artwork/artwork.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, PaginatorModule, CarouselComponent, PortfolioCardsComponent, ImageRotatorComponent],
+  imports: [CommonModule, PaginatorModule, CarouselComponent, PortfolioCardsComponent, ImageRotatorComponent, ArtworkComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'] // corrected from 'styleUrl' to 'styleUrls'
 })
