@@ -11,3 +11,12 @@ app-header {
     z-index: 1000;
     width: 100%;
 }
+.inProgressGear {
+    background-image: url(/assets/images/gear.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
