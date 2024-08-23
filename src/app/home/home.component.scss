@@ -11,9 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-text-stroke: 2px var(--accent-color);
+    -webkit-text-stroke: 1px var(--accent-color);
     font-weight: 700;
-    font-family: lato;
+    font-family: Snell Roundhand, cursive;
     color: transparent;
     @media (min-width: 768px) {
         height: 450px;
