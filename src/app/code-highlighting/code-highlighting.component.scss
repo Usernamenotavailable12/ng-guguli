@@ -1,0 +1,236 @@
+.code-container {
+    resize: none;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    max-width: 1100px;
+    height: 60vh;
+    min-height: 255px;
+    position: relative;
+    --glow-margin: 70px;
+    filter: drop-shadow(0 0 75px rgb(128 0 255 / 0.25));
+  }
+  
+  input.sig {
+    content: "attr(content)";
+    position: absolute;
+    bottom: 40px;
+    right: 90px;
+    z-index: 999;
+    color: rgb(255 200 255 / 0.5);
+    text-shadow: 0 0 12px rebeccapurple;
+    letter-spacing: 0.1em;
+    width: calc(100% - 240px);
+    background: transparent;
+    border: none;
+    text-align: right;
+    overflow: hidden;
+  }
+  input.sig:focus {
+    outline: none;
+  }
+  
+  .augs {
+    --aug-rect-l1: initial;
+    --aug-l1-width: 110px;
+    --aug-l1-height: 4px;
+    --aug-l-center: 57px;
+  
+    --aug-rect-r1: initial;
+    --aug-r1-width: (100% - 125px - 50px);
+    --aug-r1-height: 4px;
+    --aug-r-center: 57px;
+  
+    --aug-clip-tr1: initial;
+    --aug-tr1-alt-join-out: initial;
+    --aug-tr1: 17px;
+    --aug-clip-tr2: initial;
+    --aug-tr2: 17px;
+    --aug-tr-extend1: 50px;
+  
+    --aug-round-tl1: initial;
+    --aug-tl1: 8px;
+    --aug-round-br1: initial;
+    --aug-br1: 8px;
+    margin: auto;
+    width: calc(100% - var(--glow-margin) * 2);
+    height: calc(100% - var(--glow-margin) * 2);
+  }
+  
+  section.augs {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    --aug-inlay: initial;
+    --aug-inlay-all: 2px;
+    --aug-inlay-bg: url(http://augmented-ui.com/img/propjockey.png) center 70% / auto 70% no-repeat;
+    --aug-inlay-opacity: 0.25;
+    transition: all 200ms ease-in-out;
+    filter: brightness(90%);
+    &:hover {
+        filter: brightness(110%);
+    }
+  }
+  
+  .dots {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 110px;
+    height: 50px;
+    --red: #fc199a;
+    --yellow: #ffcc00;
+    --green: #61e2ff;
+    --close: radial-gradient(circle, var(--red), var(--red) 7px, transparent 8px);
+    --min: radial-gradient(circle, var(--yellow), var(--yellow) 7px, transparent 8px);
+    --max: radial-gradient(circle, var(--green), var(--green) 7px, transparent 8px);
+    background: var(--close) -28px no-repeat,
+                var(--min) -2px no-repeat,
+                var(--max) 24px no-repeat;
+    filter: brightness(0.5);
+    opacity: 0.75;
+    cursor: pointer;
+    border: none;
+  }
+  
+  input.title {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    width: calc(100% - 240px);
+    background: transparent;
+    color: rgb(255 200 255 / 0.5);
+    text-shadow: 0 0 12px rebeccapurple;
+    border: none;
+    text-align: center;
+    letter-spacing: 0.1em;
+    width: 100%;
+  }
+  input.title:focus {
+    outline: none;
+  }
+  
+  .code {
+    position: absolute;
+    inset: 80px 10px 10px 40px;
+    color: white;
+    filter: brightness(1.2);
+  }
+  .code * {
+    font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    width: 100%;
+    height: 90%;
+    background: transparent;
+    border: none;
+    resize: none;
+    color: white;
+    font-size: 18px;
+    overflow-x: hidden;
+    font-weight: 600;
+  }
+  @media (max-width: 686px) {
+    .comment,
+    .code *,
+    .highcontrast-dark,
+    .outer-div-code {
+      font-size: 15px !important;
+    }
+    .title {
+      left: 5px !important;
+    }
+    .code {
+      position: absolute;
+      inset: 60px 10px 10px 10px;
+    }
+    .dots {
+      transform: scale(.67);
+      left: -12px;
+    }
+    .augs {
+        width: 75%;
+    }
+  }
+  @media (max-width: 506px) {
+    .comment,
+    .code *,
+    .highcontrast-dark,
+    .outer-div-code {
+      font-size: 13px !important;
+    }
+    .title {
+      left: 9px !important;
+    }
+    .code {
+      position: absolute;
+      inset: 40px 10px 10px 10px;
+    }
+    .dots {
+      transform: scale(.67);
+      left: -12px;
+    }
+    .bg {
+        height: 100%;
+    }
+    .sig {
+        bottom: 15px !important;
+    }
+  }
+  .bg {
+    height: 100%;
+}
+  .code *:focus {
+    outline: none !important;
+  }
+  
+  .keyword {
+    color: #ff79c6 !important; /* Pinkish color for keywords */
+  }
+  
+  .string {
+    color: #50fa7b !important; /* Green color for strings */
+  }
+  
+  .comment {
+    color: #6272a4 !important; /* Light blue for comments */
+  }
+  
+  .function {
+    color: #f83434 !important; /* Orange color for functions */
+  }
+  
+  .number {
+    color: #bd93f9 !important; /* Purple color for numbers */
+  }
+  
+  .outer-div-code {
+    display: grid;
+    min-height: 100%;
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+    --c: rgba(255, 255, 255, 0.95);
+    --bgb: linear-gradient(var(--c), var(--c));
+    --bg: repeating-conic-gradient(
+      from 7.5deg at center center,
+      hsl(200, 100%, 100%) 0deg 15deg,
+      hsl(200, 100%, 60%) 10deg 30deg
+    );
+    background: var(--bgb), var(--bg), black;
+}
+  
+  body:has(.outer-div-code) {
+    font: normal 1em sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bg {
+    background: repeating-linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.03) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(to bottom, #200933 75%, #3d0b43);
+    border-radius: 10px;
+  }
+  
