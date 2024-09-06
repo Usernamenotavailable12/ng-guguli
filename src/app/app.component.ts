@@ -5,11 +5,12 @@ import { HeaderComponent } from "./layout/header/header.component";
 import { FooterComponent } from "./layout/footer/footer.component";
 import { ImageRotatorComponent } from './image-rotator/image-rotator.component';
 import { CodeHighlightingComponent } from './code-highlighting/code-highlighting.component';
+import { MyGithubAccountComponent } from './my-github-account/my-github-account.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, HeaderComponent, FooterComponent, ImageRotatorComponent, CodeHighlightingComponent],
+  imports: [RouterOutlet, HomeComponent, HeaderComponent, FooterComponent, ImageRotatorComponent, CodeHighlightingComponent, MyGithubAccountComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

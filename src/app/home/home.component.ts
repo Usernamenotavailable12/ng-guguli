@@ -6,12 +6,13 @@ import { PortfolioCardsComponent } from "../portfolio-cards/portfolio-cards.comp
 import { ImageRotatorComponent } from '../image-rotator/image-rotator.component';
 import { ArtworkComponent } from "../artwork/artwork.component";
 import { CodeHighlightingComponent } from "../code-highlighting/code-highlighting.component";
+import { MyGithubAccountComponent } from "../my-github-account/my-github-account.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, PaginatorModule, CarouselComponent, PortfolioCardsComponent, ImageRotatorComponent, ArtworkComponent, CodeHighlightingComponent],
+  imports: [CommonModule, PaginatorModule, CarouselComponent, PortfolioCardsComponent, ImageRotatorComponent, ArtworkComponent, CodeHighlightingComponent, MyGithubAccountComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'] // corrected from 'styleUrl' to 'styleUrls'
 })
